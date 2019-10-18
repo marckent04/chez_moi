@@ -1,0 +1,340 @@
+@import "config";
+
+//multi-slider
+
+[slider] {
+  position: relative;
+  height: 14px;
+  border-radius: 10px;
+  text-align: left;
+  margin: 45px 0 10px 0;
+}
+
+[slider] > div {
+  position: absolute;
+  left: 13px;
+  right: 15px;
+  height: 14px;
+}
+
+[slider] > div > [inverse-left] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin: 0 7px;
+}
+
+[slider] > div > [inverse-right] {
+  position: absolute;
+  right: 0;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin: 0 7px;
+}
+
+[slider] > div > [range] {
+  position: absolute;
+  left: 0;
+  height: 14px;
+  border-radius: 14px;
+  background-color: #1abc9c;
+}
+
+[slider] > div > [thumb] {
+  position: absolute;
+  top: -7px;
+  z-index: 2;
+  height: 28px;
+  width: 28px;
+  text-align: left;
+  margin-left: -11px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  border-radius: 50%;
+  outline: none;
+}
+
+[slider] > input[type="range"] {
+  position: absolute;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  height: 14px;
+  top: -2px;
+  width: 100%;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+div[slider] > input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type="range"]::-moz-range-track {
+  -moz-appearance: none;
+  background: transparent;
+  color: transparent;
+}
+
+div[slider] > input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: transparent;
+  border: transparent;
+}
+
+div[slider] > input[type="range"]:focus {
+  outline: none;
+}
+
+div[slider] > input[type="range"]::-ms-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type="range"]::-moz-range-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+}
+
+div[slider] > input[type="range"]::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 28px;
+  height: 28px;
+  border-radius: 0px;
+  border: 0 none;
+  background: red;
+  -webkit-appearance: none;
+}
+
+div[slider] > input[type="range"]::-ms-fill-lower {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type="range"]::-ms-fill-upper {
+  background: transparent;
+  border: 0 none;
+}
+
+div[slider] > input[type="range"]::-ms-tooltip {
+  display: none;
+}
+
+[slider] > div > [sign] {
+  opacity: 0;
+  position: absolute;
+  margin-left: -11px;
+  top: -39px;
+  z-index: 3;
+  background-color: #1abc9c;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+[slider] > div > [sign]:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 16px;
+  top: 19px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top-width: 16px;
+  border-top-style: solid;
+  border-top-color: #1abc9c;
+}
+
+[slider] > div > [sign] > span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+[slider]:hover > div > [sign] {
+  opacity: 1;
+}
+
+* {
+  font-family: "Roboto", "Raleway", sans-serif;
+  background-size: cover;
+}
+
+.optionBtn {
+  color: orange;
+}
+
+main {
+  padding-bottom: 200px;
+  * {
+    font-size: $defaultSize;
+  }
+}
+
+.bg-orange {
+  background: #f75006;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.orange-btn {
+  background: #f75006;
+  color: white;
+
+  &:hover {
+    color: #f75006;
+    background: white;
+  }
+}
+
+header {
+
+  * {
+    color: black;
+  }
+
+  .headerBigTitle {
+    font-size: 3em;
+  }
+
+  .headerText {
+    font-size: 1.5em;
+  }
+
+  &#index {
+    * {
+    color: white;
+    }
+    height: 600px;
+    background-image: url("../images/1.jpg");
+  }
+}
+
+.headerCard {
+  height: 220px;
+  background: #f7c800;
+}
+
+.bodyCard {
+  height: 240px;
+  padding: 5%;
+  p {
+    line-height: 25px !important;
+    font-size: 0.6em;
+  }
+}
+
+//footer stykes
+
+footer {
+  * {
+    color: white;
+  }
+  background: $footerColor;
+  padding: 30px 0 70px 0;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    p {
+      font-size: 1.2em;
+      text-align: left !important;
+      margin: 0;
+    }
+  }
+}
+
+
+
+//page 2 
+
+#carouselId {
+  .carousel-item {
+    height: 500px;
+  }
+}
+
+.myBadge {
+  font-weight: bold;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f75006;
+  font-size: 13px;
+  color: white;
+  border-radius: 100%;
+}
+
+.presentation, .visite, .conditions, .equipements {
+  p {
+    font-size: 0.6em;
+    font-weight: bold;
+  }
+}
+
+.presentation {
+  .title {
+    height: 92%;
+    padding: 20% 6% 6% 6%;
+  }
+}
+
+.conditions {
+  margin-top: 100px;
+}
+
+.receiveVisite {
+  margin-top: 120px;
+  margin-bottom: 400px;
+  .card {
+    background: #f7f4f1;
+    margin: 0 auto;
+    width: 94%;
+    height: 100px;
+    padding-left: 20%;
+    padding-right: 3%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+}
+
+
+//page3
+
+.big {
+  height: 400px;
+}
